@@ -1,0 +1,8 @@
+we are using gradient not any special color
+
+#1  red-600 --> pink-700 pe hover krne pe from #E30B5C raspberry ---> #F28500 tangerine 
+
+#2 sky-500 --> indigo-500 pe  hover krne pe from  raspberry [#E30B5C] ---> tangerine [#F28500]   
+
+#3 [#22cc19] --> [#37c6c8] pe hover krne pe from dark orchid-[#C319CC] ---> [#C83937]*,
+-------------------------------------------------------------------------------------------

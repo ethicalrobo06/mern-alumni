@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+.container-auth {
+  background: #f6f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  margin: -20px 0 50px;
+}
+
+.fet {
+  background: linear-gradient(to bottom, #dc2626, #db2777);
+}
+
+.fet:hover {
+  background: linear-gradient(to left, #f28500, #e30b5c);
+}
+
+.banner {
+  background-image: url('../assets/placement.jpg'); /* Update the path to the actual location of the image */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 353px; /* Adjust the height as needed */
+}

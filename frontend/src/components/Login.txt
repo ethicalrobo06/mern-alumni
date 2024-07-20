@@ -1,0 +1,57 @@
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+
+function Login() {
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    return (
+        <div className='ml-[20rem] mt-[10rem] p-4 border-2 border-green-700 w-[556.838px] h-[474.725px]'>
+            <form>
+                <div className="mb-4">
+                    <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
+                        Email*
+                    </label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                </div>
+                <div className="mb-4">
+                    <label htmlFor="password" className="block text-gray-700 font-bold mb-2">
+                        Password*
+                    </label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                </div>
+                <div className="flex items-center justify-between">
+                    <Link to='/home'>
+                        <button
+                            // onClick={login}
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="submit"
+                        >
+                            LOGIN
+                        </button>
+                    </Link>
+                    <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+                        FORGOT PASSWORD?
+                    </a>
+                </div>
+            </form>
+        </div>
+    )
+}
+
+export default Login
+
