@@ -13,7 +13,6 @@ function App() {
     return isAuthenticated ? element : <Navigate to='/login' />
   }
 
-
   return (
     <>
       <RefreshHandler setIsAuthenticated={setIsAuthenticated} />
