@@ -18,7 +18,7 @@ function Home() {
         setLoggedInUser(localStorage.getItem('loggedInUser'))
     }, [])
 
-    const handleLogout = (e) => {
+    const handleLogout = () => {
         localStorage.removeItem('token')
         localStorage.removeItem('loggedInUser')
         handleSuccess('User LoggedOut')
@@ -29,8 +29,8 @@ function Home() {
 
     const fetchProducts = async () => {
         try {
-            const url = "https://mern-alumni-api.vercel.app/products"
-            // const url = "http://localhost:8080/products"
+            // const url = "https://mern-alumni-api.vercel.app/products"
+            const url = "http://localhost:8080/products"
             const headers = {
                 headers: {
                     "Authorization": localStorage.getItem('token')
