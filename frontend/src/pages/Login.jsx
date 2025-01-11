@@ -39,7 +39,8 @@ function Login() {
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    credentials: 'include', // Include credentials in the request
                 },
                 body: JSON.stringify(signupInfo)
             });
@@ -69,6 +70,7 @@ function Login() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
+                credentials: 'include', // Include credentials in the request
                 body: JSON.stringify(signinInfo)
             });
             const result = await response.json();

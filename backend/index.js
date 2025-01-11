@@ -14,6 +14,8 @@ app.get('/ping', (req, res) => {
   res.send('PONG')
 })
 
+const allowedOrigins = ['https://alumni-cyan.vercel.app']
+
 app.use(bodyParser.json())
 app.use(cors())
 app.use('/auth', AuthRouter)
