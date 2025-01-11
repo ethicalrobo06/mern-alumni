@@ -29,6 +29,7 @@ function Login() {
     const handleSignUp = async (e) => {
         e.preventDefault();
         const { name, email, password } = signupInfo;
+        console.log(signupInfo.email)
         if (!name || !email || !password) {
             return handleError('Name, email, and password are required');
         }
@@ -44,6 +45,7 @@ function Login() {
             const result = await response.json();
             if (result.success) {
                 handleSuccess(result.message);
+                setSigninInfo(prevState => ({ ...prevState, email: signupInfo.email }));
             } else {
                 handleError(result.message);
             }
