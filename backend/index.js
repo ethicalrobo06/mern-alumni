@@ -9,24 +9,24 @@ require('dotenv').config()
 require('./Models/db')
 
 const PORT = process.env.PORT || 8080
-
-// Allow only specific origins for CORS
-const allowedOrigins = ['https://alumni-cyan.vercel.app']
-
 app.use(bodyParser.json())
 
-// CORS configuration
+const allowedOrigins = [
+  'https://alumni-cyan.vercel.app',
+  'http://localhost:5173',
+]
+
 app.use(
   cors({
     origin: function (origin, callback) {
-      // Allow requests with no origin (like mobile apps or Postman)
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true)
       } else {
         callback(new Error('Not allowed by CORS'))
       }
     },
-    credentials: true, // Allow cookies or Authorization headers
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
   })
 )
 

@@ -34,8 +34,8 @@ function Login() {
             return handleError('Name, email, and password are required');
         }
         try {
-            // const url = "http://localhost:8080/auth/signup";
-            const url = "https://mern-alumni-api.vercel.app/auth/signup";
+            const url = "http://localhost:8080/auth/signup";
+            // const url = "https://mern-alumni-api.vercel.app/auth/signup";
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
@@ -63,8 +63,8 @@ function Login() {
             return handleError('Email and password are required');
         }
         try {
-            // const url = "http://localhost:8080/auth/login";
-            const url = "https://mern-alumni-api.vercel.app/auth/login";
+            const url = "http://localhost:8080/auth/login";
+            // const url = "https://mern-alumni-api.vercel.app/auth/login";
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
